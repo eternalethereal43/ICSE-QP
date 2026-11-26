@@ -1,0 +1,6 @@
+{
+  "name": "Scholaris ICSE",
+  "description": "ICSE Class X Question Paper Generator, Detailed Marking Scheme PDF Exporter, and Interactive Concept-Clearance Studio covering all 8 core CISCE subjects.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
