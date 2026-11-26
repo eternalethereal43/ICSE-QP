@@ -1,0 +1,21 @@
+# Render Blueprint: runs the full Scholaris ICSE app (React frontend + Express/Gemini API server).
+# Deploy: https://render.com/deploy?repo=https://github.com/eternalethereal43/ICSE-QP
+services:
+  - type: web
+    name: scholaris-icse
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: npm install --include=dev && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: "22"
+      # Your Gemini API key from https://aistudio.google.com/apikey.
+      # Render asks for it when you create the service; it is never stored in this repo.
+      - key: GEMINI_API_KEY
+        sync: false

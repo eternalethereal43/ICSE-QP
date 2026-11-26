@@ -6,3 +6,6 @@ coverage/
 *.log
 .env*
 !.env.example
+
+# Bundled production server (built by `npm run build`)
+server.js
